@@ -3,7 +3,11 @@
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
-  // TODO
+  let counter = 0;
+  while (numbers[counter] !== undefined) {
+    counter++;
+  }
+  return counter;
 }
 
 /**
@@ -11,7 +15,13 @@ function getLength(numbers) {
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  // TODO
+  let counter = 0;
+  let sum = 0;
+  while (numbers[counter] !== undefined){
+    sum = sum + numbers[counter];
+    ++ counter;
+  }
+  return sum;
 }
 
 /**
@@ -19,7 +29,8 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
+  let sum = getSum(numbers);
+  return (sum / numbers.length);
 }
 
 /**
@@ -27,7 +38,13 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  // TODO
+  let min = numbers[0];
+  for (let i = 0; i < numbers.length; ++i) {
+    if (numbers[i] < min) {
+      min = numbers[i];
+  }
+}
+  return min;
 }
 
 /**
@@ -35,7 +52,13 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  // TODO
+  let max = numbers[0];
+  for (let i = 0; i < numbers.length; ++i) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
+  return max;
 }
 
 /**
@@ -43,7 +66,8 @@ function getMax(numbers) {
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  // TODO
+  let range = (getMax(numbers) - getMin(numbers));
+  return range;
 }
 
 /**
@@ -51,7 +75,9 @@ function getRange(numbers) {
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
-  // TODO
+  let evens = [];
+  for (let i = 0; i < numbers.length; ++i) {
+    if 
 }
 
 /**
